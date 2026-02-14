@@ -1,14 +1,16 @@
-Backend:
-    POST /api/auth/register -TODO
-    POST /api/auth/login -TODO
-    GET /api/user/me (protected) -TODO
-    Database connection (MySQL) -TODO
-    Password encryption (BCrypt) -DONE
+DONE:
+POST /api/auth/register
+POST /api/auth/login
+GET /api/user/me (protected)
+Password encryption (BCrypt)
 
-Web Application:
-    Register page -TODO
-    Login page -TODO
-    Dashboard/Profile page (protected) -TODO
-    Logout functionality -TODO
+Register page
+Login page
+Dashboard/Profile page (protected)
 
-Documentation:
+IN-PROGRESS:
+
+
+TODO:
+Database connection (MySQL)
+Logout functionality
