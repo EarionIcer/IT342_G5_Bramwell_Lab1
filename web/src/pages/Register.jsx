@@ -13,7 +13,6 @@ export default function Register() {
   });
   const navigate = useNavigate();
 
-  // Password validation: 8 chars, upper, lower, number, special
   const validatePassword = (password) => {
     const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/;
     return regex.test(password);
@@ -40,8 +39,15 @@ export default function Register() {
 
   return (
     <Container maxWidth="sm">
-      <Typography variant="h4" gutterBottom>Register</Typography>
-      <Box display="flex" flexDirection="column" gap={2}>
+      <Box
+        display="flex"
+        flexDirection="column"
+        alignItems="center"
+        justifyContent="center"
+        minHeight="100vh"
+        gap={2}
+      >
+        <Typography variant="h4" gutterBottom align="center">Register</Typography>
         <TextField
           label="Email"
           fullWidth

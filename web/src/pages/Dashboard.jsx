@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Container, Typography, Button } from "@mui/material";
+import { Container, Typography, Button, Box } from "@mui/material";
 import { useAuth } from "../context/AuthContext.jsx";
 import { useNavigate } from "react-router-dom";
 
@@ -24,15 +24,24 @@ export default function Dashboard() {
   };
 
   return (
-    <Container>
-      <Typography variant="h4">Dashboard</Typography>
-      {profile && (
-        <>
-          <Typography>Email: {profile.email}</Typography>
-          <Typography>Username: {profile.username}</Typography>
-        </>
-      )}
-      <Button variant="outlined" onClick={handleLogout}>Logout</Button>
+    <Container maxWidth="sm">
+      <Box
+        display="flex"
+        flexDirection="column"
+        alignItems="center"
+        justifyContent="center"
+        minHeight="100vh"
+        gap={2}
+      >
+        <Typography variant="h4" align="center">Dashboard</Typography>
+        {profile && (
+          <>
+            <Typography align="center">Email: {profile.email}</Typography>
+            <Typography align="center">Username: {profile.username}</Typography>
+          </>
+        )}
+        <Button variant="outlined" onClick={handleLogout}>Logout</Button>
+      </Box>
     </Container>
   );
 }

@@ -19,8 +19,15 @@ export default function Login() {
 
   return (
     <Container maxWidth="sm">
-      <Typography variant="h4" gutterBottom>Login</Typography>
-      <Box display="flex" flexDirection="column" gap={2}>
+      <Box
+        display="flex"
+        flexDirection="column"
+        alignItems="center"
+        justifyContent="center"
+        minHeight="100vh"
+        gap={2}
+      >
+        <Typography variant="h4" gutterBottom align="center">Login</Typography>
         <TextField
           label="Email"
           fullWidth
