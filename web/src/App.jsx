@@ -6,8 +6,8 @@ import Dashboard from "./pages/Dashboard";
 
 // Wrapper for protected routes
 function PrivateRoute({ children }) {
-  const { user } = useAuth();
-  return user ? children : <Navigate to="/login" />;
+  const { token } = useAuth();
+  return token ? children : <Navigate to="/login" />;
 }
 
 export default function App() {

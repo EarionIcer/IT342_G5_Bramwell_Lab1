@@ -1,4 +1,4 @@
-package com.it342.controller;
+package com.it342.bramwell.controller;
 
 import lombok.RequiredArgsConstructor;
 
@@ -7,8 +7,8 @@ import java.util.Optional;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import com.it342.entity.User;
-import com.it342.repository.UserRepository;
+import com.it342.bramwell.entity.User;
+import com.it342.bramwell.repository.UserRepository;
 
 @RestController
 @RequestMapping("/api/user")

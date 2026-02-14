@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { TextField, Button, Container } from "@mui/material";
+import { TextField, Button, Container, Typography, Box } from "@mui/material";
 import { useAuth } from "../context/AuthContext.jsx";
 import { useNavigate } from "react-router-dom";
 
@@ -10,16 +10,35 @@ export default function Login() {
 
   const handleSubmit = async () => {
     const success = await login(form.email, form.password);
-    if (success) navigate("/dashboard");
-    else alert("Invalid credentials");
+    if (success) {
+      navigate("/dashboard");
+    } else {
+      alert("Invalid credentials");
+    }
   };
 
   return (
-    <Container>
-      <h2>Login</h2>
-      <TextField label="Email" fullWidth onChange={e => setForm({ ...form, email: e.target.value })} />
-      <TextField label="Password" type="password" fullWidth onChange={e => setForm({ ...form, password: e.target.value })} />
-      <Button variant="contained" onClick={handleSubmit}>Login</Button>
+    <Container maxWidth="sm">
+      <Typography variant="h4" gutterBottom>Login</Typography>
+      <Box display="flex" flexDirection="column" gap={2}>
+        <TextField
+          label="Email"
+          fullWidth
+          value={form.email}
+          onChange={e => setForm({ ...form, email: e.target.value })}
+        />
+        <TextField
+          label="Password"
+          type="password"
+          fullWidth
+          value={form.password}
+          onChange={e => setForm({ ...form, password: e.target.value })}
+        />
+        <Button variant="contained" onClick={handleSubmit}>Login</Button>
+        <Button variant="text" onClick={() => navigate("/register")}>
+          Don’t have an account? Register
+        </Button>
+      </Box>
     </Container>
   );
 }

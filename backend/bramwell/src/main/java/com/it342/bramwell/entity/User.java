@@ -1,4 +1,4 @@
-package com.it342.entity;
+package com.it342.bramwell.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
